@@ -36,8 +36,8 @@ export const HelloWorld: React.FC<{
 	// Fade out the animation at the end
 	const opacity = interpolate(
 		frame,
-		[durationInFrames - 25, durationInFrames - 15],
-		[1, 0],
+		[25, durationInFrames],
+		[.75, 1],
 		{
 			extrapolateLeft: 'clamp',
 			extrapolateRight: 'clamp',

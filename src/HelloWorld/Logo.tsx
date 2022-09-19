@@ -4,10 +4,11 @@ import {
 	spring,
 	useCurrentFrame,
 	useVideoConfig,
-	Img, staticFile,
+	Img, staticFile, Audio,
 } from 'remotion';
 import {Arc} from './Arc';
 import {Atom} from './Atom';
+import audio from "../../public/bensound-roomservice.mp3";
 
 export const Logo: React.FC = () => {
 	const videoConfig = useVideoConfig();
@@ -48,13 +49,20 @@ export const Logo: React.FC = () => {
 	);
 
 	return (
-		<AbsoluteFill
-			style={{
-				transform: `scale(${scale}) rotate(${logoRotation}deg)`,
-			}}
-		>
-			<Img 
-			  src={logo} />
-		</AbsoluteFill>
+		<>
+			<AbsoluteFill
+					style={{
+						transform: `scale(${scale}) rotate(${logoRotation}deg)`,
+					}}
+			>
+				<Img
+						src={logo} />
+			</AbsoluteFill>
+
+			<Audio
+					src={audio}
+			/>
+
+		</>
 	);
 };
