@@ -1,4 +1,4 @@
-import {Composition} from 'remotion';
+import {Composition, useVideoConfig} from 'remotion';
 import {HelloWorld} from './HelloWorld';
 import {Logo} from './HelloWorld/Logo';
 
@@ -19,8 +19,8 @@ export const RemotionVideo: React.FC = () => {
 				// You can override these props for each render:
 				// https://www.remotion.dev/docs/parametrized-rendering
 				defaultProps={{
-					titleText: 'Welcome to Remotion',
-					titleColor: 'black',
+					titleText: `Dear Life video editor`,
+					titleColor: '#00A5A0',
 				}}
 			/>
 			{/* Mount any React component to make it show up in the sidebar and work on it individually! */}

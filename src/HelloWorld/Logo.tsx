@@ -4,6 +4,7 @@ import {
 	spring,
 	useCurrentFrame,
 	useVideoConfig,
+	Img, staticFile,
 } from 'remotion';
 import {Arc} from './Arc';
 import {Atom} from './Atom';
@@ -11,6 +12,8 @@ import {Atom} from './Atom';
 export const Logo: React.FC = () => {
 	const videoConfig = useVideoConfig();
 	const frame = useCurrentFrame();
+
+	const logo = staticFile(`/logo.webp`);
 
 	const development = spring({
 		config: {
@@ -50,22 +53,8 @@ export const Logo: React.FC = () => {
 				transform: `scale(${scale}) rotate(${logoRotation}deg)`,
 			}}
 		>
-			<Arc
-				rotateProgress={rotationDevelopment}
-				progress={development}
-				rotation={30}
-			/>
-			<Arc
-				rotateProgress={rotationDevelopment}
-				rotation={90}
-				progress={development}
-			/>
-			<Arc
-				rotateProgress={rotationDevelopment}
-				rotation={-30}
-				progress={development}
-			/>
-			<Atom scale={rotationDevelopment} />
+			<Img 
+			  src={logo} />
 		</AbsoluteFill>
 	);
 };
