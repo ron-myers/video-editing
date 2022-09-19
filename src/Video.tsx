@@ -1,4 +1,4 @@
-import {Composition, useVideoConfig} from 'remotion';
+import {Audio, Composition, useVideoConfig} from 'remotion';
 import {HelloWorld} from './HelloWorld';
 import {Logo} from './HelloWorld/Logo';
 
@@ -12,7 +12,7 @@ export const RemotionVideo: React.FC = () => {
 				// npx remotion render src/index.tsx <id> out/video.mp4
 				id="HelloWorld"
 				component={HelloWorld}
-				durationInFrames={150}
+				durationInFrames={180}
 				fps={30}
 				width={1920}
 				height={1080}
@@ -27,7 +27,7 @@ export const RemotionVideo: React.FC = () => {
 			<Composition
 				id="OnlyLogo"
 				component={Logo}
-				durationInFrames={150}
+				durationInFrames={180}
 				fps={30}
 				width={1920}
 				height={1080}

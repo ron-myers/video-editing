@@ -14,7 +14,7 @@ export const Logo: React.FC = () => {
 	const videoConfig = useVideoConfig();
 	const frame = useCurrentFrame();
 
-	const logo = staticFile(`/logo.webp`);
+	const logo = staticFile(`/logo.svg`);
 
 	const development = spring({
 		config: {
